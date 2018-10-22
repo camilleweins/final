@@ -91,3 +91,49 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 
+//Drop drops = new Drop(500);
+//vector<Drop> drops;
+//Drop(500);
+
+#define drops 500
+Drop groupOfDrops[drops];
+////int drops = 500;
+
+//float Drop::size = [500];
+
+
+void Drop::fall() {
+    y = y + yspeed;
+    float grav = ofMap(z, 0, 20, 0, 0.2); //to make the movement more natural
+    yspeed = yspeed + grav;
+    
+    //so the drops reset to the top
+    //    if (y > ofGetHeight()) {
+    //        y = ofRandom(-200, -100);
+    //        yspeed = ofMap(z, 0, 20, 4, 10);
+    //    }
+    if (y > 600) {
+        y = ofRandom(-200, -100);
+        yspeed = ofMap(z, 0, 20, 4, 10);
+    }
+}
+
+void Drop::show() {
+    float thick = ofMap(z, 0, 20, 1, 3);
+    ofSetLineWidth(thick);
+    ofSetColor(138, 43, 226);
+    ofDrawLine(x, y, x, y + len);
+    
+}
+
+void Drop::setup() {
+    for(int i = 0; i < 500; i++){
+        groupOfDrops[i].setup();
+    }
+}
+
+void Drop::draw() {
+    for(int i = 0; i < drops; i++){
+        groupOfDrops[i].setup();
+    }
+}
