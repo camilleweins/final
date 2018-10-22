@@ -3,6 +3,10 @@
 #include "ofMain.h"
 #include "photons.h"
 
+//#define drops 500
+//
+//Drop groupOfDrops[drops];
+
 class ofApp : public ofBaseApp{
 
 	public:

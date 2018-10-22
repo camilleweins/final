@@ -4,6 +4,8 @@
 
 #include <stdio.h>
 
+
+
 //define the class for the particles
 class Drop {
     public:
@@ -18,6 +20,8 @@ class Drop {
     float z;
     float len;
     float yspeed; //variables
+    //vector<Drop> drops;
+
     Drop(); // constructor - used to initialize an object, if no properties are passed the program sets them to the default value
 };
 

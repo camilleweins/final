@@ -1,6 +1,14 @@
 #include "photons.h"
 
-//stuff for the class
+//Drop drops = new Drop(500);
+//vector<Drop> drops;
+//Drop(500);
+
+#define drops 500
+
+Drop groupOfDrops[drops];
+
+//creation of the class without arguments
 Drop::Drop() {
     x  = ofRandom(ofGetWidth()); //random starting location
     y  = ofRandom(-500, -50); //random y location and start off screen
@@ -30,14 +38,13 @@ void Drop::show() {
 }
 
 void Drop::setup() {
-    for (int i = 0; i < drops.length; i++) {
-        drops[i] = new Drop();
+    for(int i=0; i < drops; i++){
+        groupOfDrops[i].setup();
     }
 }
 
 void Drop::draw() {
-    for (int i = 0; i < drops.length; i++) {
-        drops[i].fall();
-        drops[i].show();
+    for(int i=0; i < drops; i++){
+        groupOfDrops[i].setup();
     }
 }

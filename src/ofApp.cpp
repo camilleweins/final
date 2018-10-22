@@ -1,11 +1,14 @@
 #include "ofApp.h"
 
 //array of drop objects
-Drop[] drops = new Drop[500];
+//Drop[] drops = new Drop[500];
 
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(230, 230, 250);
+    
+
+    
     myDrop.setup(); // calling the object's setup method
 //    for (int i = 0; i < drops.length; i++) {
 //        drops[i] = new Drop();
@@ -23,6 +26,10 @@ void ofApp::draw(){
     
 //    ofSetColor(255, 255, 255); //set color of circle
 //    ofDrawCircle(200, mouseY, 10);
+    
+//    for(int i=0; i < drops; i++){
+//        groupOfDrops[i].setup();
+//    }
     
     myDrop.draw(); // calling the object's update method
 
