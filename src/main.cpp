@@ -1,6 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
-#include "photons.h"
+//#include "photons.h"
 
 //========================================================================
 int main( ){
